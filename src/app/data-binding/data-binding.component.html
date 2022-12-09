@@ -1,0 +1,70 @@
+
+<h1>My age is {{ age }} </h1>
+<h1>My name is {{ name }}</h1>
+<h1>From india {{ isIndian }}</h1>
+
+
+<button (click)="test()">submit</button>
+<button (dblclick)="test2()">cancel</button>
+
+<input (keypress)="test3()" >
+
+<button (mouseenter)="test4()">Hello</button>
+<button (mouseleave)="test5()">World</button>
+
+<input type="number" [(ngModel)]="phone">
+<p>{{phone}}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Data Binding:
+-------------
+    Exchanging data from class to template.  (class->tsFile, template->htmlFile)
+
+    4 types of data binding:
+    ------------------------
+    
+    1) Interpolation:  class -> template
+
+        symbol: {{  }} 
+    
+        TS:
+            public age:number = 20;
+
+        HTML
+            <p> My age is {{ age }}</p>
+
+    2) Event Binding: template -> class
+
+        symbol:  ()=""
+
+        HTML:
+            <button (click)="test()">
+
+        TS:
+            test(){
+
+            }
+
+    3) Two way binding:  class    template
+
+        symbol: [()]=""
+
+        1) import FormsModule in app module.
+        2) 
+            HTML:
+                <input [(ngModel)]="phone">
+            TS:
+                public phone:number = 0; 
+
+ -->
