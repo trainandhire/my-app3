@@ -1,5 +1,13 @@
 <p>directives works!</p>
 
+<h1>{{ today }}</h1>
+<h2>{{ today | date }}</h2>
+<h2>{{ today | date:'yyyy/dd/MM' }}</h2>
+<h2>{{ today | date:'yy-dd-MM' }}</h2>
+<h2>{{ today | date:'mediumTime' }}</h2>
+
+<h2>{{ user | json}}</h2>
+
 <ol>
     <li *ngFor="let name of names">{{name}}</li>
 </ol>
@@ -9,7 +17,7 @@
     <option *ngFor="let state of states">{{state}}</option>
 </select>
 
-<table border="1">
+<table class="table">
     <thead>
         <tr>
             <th>Name</th>
@@ -19,9 +27,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let user of users">
-            <td>{{user.name}}</td>
-            <td>{{user.age}}</td>
-            <td>{{user.package}}</td>
+            <td>{{user.name | uppercase}}</td>
+            <td [ngClass]="{ 'red': user.age>0&&user.age<20, 'yellow': user.age>20&&user.age<=30, 'green': user.age>30 }">{{user.age}}</td>
+            <td [ngStyle]="{'background-color':user.package<10?'red':'green'}">{{user.package}}</td>
         </tr>
     </tbody>
 </table>
@@ -29,3 +37,5 @@
 <h1 *ngIf="time>0&&time<12">Good Morning</h1>
 <h1 *ngIf="time>13&&time<20">Good Afternoon</h1>
 <h1 *ngIf="time>20&&time<24">Good Night</h1>
+
+

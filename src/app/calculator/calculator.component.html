@@ -38,6 +38,34 @@
 
             <h1 *ngIf="condition">Hello</h1>
 
-    2) Attribute Directives:
+    2) Attribute Directives: alters attribute values dinamically
     ------------------------
- -->
+            
+        ngStyle:  To change css property value dynamically.
+        --------
+            <td [ngStyle]="color':user.package<10?'red':'green'}">{{user.package}}</td>
+
+        ngClass:  To apply the class dynamically on condition base.
+        --------
+            <td [ngClass]="{ 'red': marks<35, 'green': marks>=35 }">  
+            
+    
+    3) Component Directives:
+    ------------------------
+
+        In angular all the components are directives.
+
+        Directives are superset, components are subset.
+
+
+    PIPES:
+    ------
+
+        Pipes are userful to transform data from one format to another format.
+
+        Ex: lowercase, uppercase, date, json
+
+        symbol:  |
+
+
+    -->
