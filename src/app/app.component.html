@@ -1,1 +1,33 @@
 <router-outlet></router-outlet>
+
+<!-- Routing:
+--------
+    Angular app is a single page application.
+    Routing helps us to change the view in SPA, with paths.
+
+    Where:
+    ------
+        in app-routing.module.ts  ->  routes array
+
+    4 types of routes:
+    ------------------
+    1) Route
+        {path:'login', component: LoginComponent}
+    2) Empty route
+        {path:'', component: LoginComponent}
+    3) FallBack route / Wildcard Route
+        {path:'**', component: PageNotFoundComponent}
+    4) Children routes
+        {path:'dashboard', component:DashboardComponent, children:[
+            {path:'home', component:HomeComponent}
+        ]}
+
+    router-outlet:
+    --------------
+        Tag that loads router output.
+
+    routerLink:
+    -----------
+        Attribute to change the path. -->
+
+
